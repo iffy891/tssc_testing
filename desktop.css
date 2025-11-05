@@ -1,0 +1,76 @@
+/*
+    Author: Riley Anderson
+    Date: 17/06/2021
+    Purpose: styling for desktop view
+*/
+
+/* ==========================================================
+========================= Web Pages =========================
+===========================================================*/
+#nav_setup {
+    background-color: white;
+    align-content: center;
+}
+
+#main_content_left {
+    float: left;
+    width: 50%;
+}
+#video_right, #map_right {
+    float: right;
+    width: 50%;
+    display: block;
+    margin-top: 10px;
+}
+
+/* #map_right {
+    float: right;
+    width: 50%;
+    display: block;
+    margin-top: 0.62em;
+}
+*/
+#video, #map {
+    text-align: right
+}
+
+footer {
+    clear: both;
+    background-color: white;
+}
+
+#Assoc_Logo {
+    height: 15%;
+    left: 1%;
+}
+#motto {
+    padding-bottom: 50px;
+}
+
+.navbar-collapse {
+    box-shadow: none;
+    background: none;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-nav > li {
+    padding: 0 15px;
+}
+
+.navbar-nav > li > a {
+    text-align: center;
+    padding: 10px 15px;
+}

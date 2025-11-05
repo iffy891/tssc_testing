@@ -1,0 +1,88 @@
+/*
+    Author: Riley Anderson
+    Date: 17/06/2021
+    Purpose: Styling for tablet view
+*/
+
+/* ==========================================================
+========================= Web Pages =========================
+===========================================================*/
+#Assoc_Logo {
+    height: 150px;
+    top: 30px;
+}
+
+h1.navbar{
+    font-size: 2.5rem;
+}
+
+.navbar-toggler{
+    height: auto;
+    width: 100%;
+}
+
+.navbar-toggler {
+    font-size: 2rem;
+    
+}
+
+body {
+    font-size: 1.5rem;
+}
+
+
+h4 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+/*
+==========================================================
+================= Colour blindness changes ==================
+========================================================== 
+.deuteranopia:hover{
+    /* Nav bar colour
+    background-color: #575550;
+    
+}
+.deutera {
+    /* Body colour*
+    background-color: #A09037;
+}
+
+.protanopia:hover {
+    /* Nav bar colour*
+    background-color: #625D4D;
+}
+
+.prota {
+    /* Body colour*
+    background-color: #70663D;
+}
+
+.tritanopia:hover {
+    /* Nav bar colour*
+    background-color: #00665E;
+}
+.trita {
+    /* Body colour*
+    background-color: #FF0038;
+}
+
+/* ==========================================================
+=========================== Page3 ===========================
+========================================================== *
+
+
+tr {
+    border: 5px solid black;
+}
+
+td, th {
+    padding: 10px;
+    border-right: 5px solid black;
+}
+
+*/

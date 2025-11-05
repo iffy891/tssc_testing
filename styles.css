@@ -1,0 +1,245 @@
+/*
+    Author: Riley Anderson
+    Date: 17/06/2021
+    Purpose: styling for mobile view
+*/
+
+/* ==========================================================
+======= Imported fonts from https://fonts.google.com/ =======
+===========================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Montserrat:wght@700&display=swap');
+
+
+/* ==========================================================
+========================= Web Pages =========================
+===========================================================*/
+
+.nav-link.active,
+.nav-link:active {
+    background-color: #cff7d1;
+    box-shadow: inset 0 0 0 2px rgba(0,0,0,0.04);
+}
+
+body{
+    background-color: #0ee920cb;
+    padding: 5px;
+}
+h1, p#motto {
+    z-index: 1;
+}
+#nav_setup {
+
+    /*
+    background-color: white;
+    justify-content: center;
+    */
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 8px;
+    box-sizing: border-box;
+}
+
+div#bottom_rw_header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 0 15px;
+}
+
+h1.navbar {
+    font-size: 1.25rem;
+    line-height: 1.1;
+    margin: 8px 0;
+    text-align: center;
+    white-space: normal;
+    padding: 0 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#main_content_left, #image_carousel_right {
+    /*width: 50%;*/
+    margin-bottom: 20px;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+#main_content_left {
+    float: none;
+    background-color: white;
+}
+
+#image_carousel_right {
+    float: none;
+    height: auto;
+}
+
+footer {
+    /*border: 3px solid yellow;*/
+    margin-top: 20px;
+    clear: both;
+    background-color: white;
+    padding: 10px;
+}
+
+#Assoc_Logo {
+    /*
+    position: absolute;
+    height: 15%;
+    width: auto;
+    z-index: 1;
+    */
+    position: static;
+    height: 95px;
+    max-height: 20vh;
+    width: auto;
+    margin: 4px 0;
+    z-index: 2;
+
+}
+
+nav.navbar {
+    width: 100%;
+    padding: 0;
+}
+
+.navbar-collapse {
+    width: 100%;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding:6px;
+    align-items: stretch;
+}
+
+.navbar-nav, .nav-link{
+    padding: 6px 12px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.pg_img {
+    width: inherit;
+    height: auto;
+}
+.link:hover{
+    background-color: #0ee920cb;
+    color: black;
+}
+#navbardrop:hover, .dropdown-item:hover {
+    background-color: grey;
+    color: black;
+}
+
+.dropdown-menu {
+    border-radius: 10px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    margin-top: 6px;
+    padding: 6px;
+}
+.dropdown-item {
+    border-radius: 8px;
+    padding: 10px 14px;
+}
+
+.nav-link {
+    display: block;
+    padding: 12px 16px;;
+    border-radius: 10px;  /* was 5px */
+    background: transparent;;
+    color: rgba(0,0,0,0.92) !important;
+    font-weight: 600;
+    box-shadow: none;
+    transition: background-color 160ms ease, transform100ms ease, box-shadow 160ms ease;
+    outline: 2px solid black;
+    outline-offset: 0px;
+    margin-right: 10px;
+}
+.navbar-toggler {
+
+    /*
+    margin-left: 10px;
+    height: 44px;
+    margin-top: 25px;
+    left: 20px;
+    */
+    margin-top: 6px;
+    margin-left: 0;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.08);
+    padding: 6px;
+}
+
+a {
+    color: rgba(0,0,0,1) !important;
+}
+
+.navbar-collapse{
+    background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+    border-radius:12px;
+    padding:8px;
+    margin-top:8px;
+
+}
+
+/* ==========================================================
+================= Colour blindness changes ==================
+========================================================== */
+.deuteranopia:hover{
+    /* Nav bar colour*/
+    background-color: #575550;
+    
+}
+.deutera {
+    /* Body colour*/
+    background-color: #A09037;
+}
+
+.protanopia:hover {
+    /* Nav bar colour*/
+    background-color: #625D4D;
+}
+
+.prota {
+    /* Body colour*/
+    background-color: #70663D;
+}
+
+.tritanopia:hover {
+    /* Nav bar colour*/
+    background-color: #00665E;
+}
+.trita {
+    /* Body colour*/
+    background-color: #FF0038;
+}
+
+.filtering {
+    filter: grayscale(100%);
+}
+/* ==========================================================
+=========================== Page3 ===========================
+========================================================== */
+
+
+tr {
+    border: 5px solid black;
+}
+
+td, th {
+    padding: 10px;
+    border-right: 5px solid black;
+}
+
+
