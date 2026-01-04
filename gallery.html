@@ -63,22 +63,105 @@ Version: 1.0
                 </div>
             </section>
         </header>
-        <aside id="main_content_left">
-            <h2>About the sport</h2>
-            <p>Basic information about the sport in general</p>
-            <h2>About our association</h2>
-            <p>Basic information about TSSC association</p>
-            
+        <aside id="image_carousel">
+            <section id="carousel_content">
+                <!-- Bootstrap from https://www.w3schools.com/bootstrap4/bootstrap_carousel.asp -->
+            <div id="demo" class="carousel slide" data-ride="carousel">
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                    <li data-target="#demo" data-slide-to="3"></li>
+                    <li data-target="#demo" data-slide-to="4"></li>
+                    <li data-target="#demo" data-slide-to="5"></li>
+                    <li data-target="#demo" data-slide-to="6"></li>
+                    <li data-target="#demo" data-slide-to="7"></li>
+                    <li data-target="#demo" data-slide-to="8"></li>
+                    <li data-target="#demo" data-slide-to="9"></li>
+                </ul>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="resources/4_corner's25.jpg" alt="" role="img" class='pg_img'>
+                        <div class="carousel-caption">
+                            <h3></h3>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="resources/A&F_Team25.jpg" alt="" role="img" class='pg_img'>
+                        <div class="carousel-caption">
+                            <h3></h3>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="resources/champ_of_champs25_1.jpg" alt="" role="img" class='pg_img'>
+                        <div class="carousel-caption">
+                            <h3></h3>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="resources/champ_of_champs25_2.jpg" alt="" role="img" class='pg_img'>
+                        <div class="carousel-caption">
+                            <h3></h3>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="resources/Crew_1.jpg" alt="" role="img" class='pg_img'>
+                        <div class="carousel-caption">
+                            <h3></h3>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="resources/intersquad_1.jpg" alt="" role="img" class='pg_img'>
+                        <div class="carousel-caption">
+                            <h3></h3>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="resources/Prizegivving_24.jpg" alt="" role="img" class='pg_img'>
+                        <div class="carousel-caption">
+                            <h3></h3>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="resources/Ready_for_setup_1.jpg" alt="" role="img" class='pg_img'>
+                        <div class="carousel-caption">
+                            <h3></h3>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="resources/round_1.jpg" alt="" role="img" class='pg_img'>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <img src="resources/Training.jpg" alt="" role="img" class='pg_img'>
+                        <div class="carousel-caption">
+                            <h3></h3>
+                            <p></p>
+                        </div>
+                    </div>
+                
+                </div>
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+
+            </section>
+
+
         </aside>
-        <aside id="video_right">
-            <div id="video">
-                <!-- <iframe width=100% height="auto" src="https://www.youtube.com/embed/E-jfvQc4IN0?si=u-CJshtPsFGRH7Ck" title="Safety Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
-                <iframe width="100%" height="500" src="https://www.youtube.com/embed/E-jfvQc4IN0?si=d-Lhv58aAM9pVX8G"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </aside>
+
        <!-- 
         <aside id="image_carousel_right">
             <section id="carousel_content">
@@ -178,6 +261,67 @@ Version: 1.0
             </section>
         </footer>
         <!-- <script src="main.js"></script> -->
+        <!-- Carousel height animation: animate .carousel-inner height to smooth layout jumps and avoid ghosting -->
+        <script>
+            (function(){
+                // Ensure jQuery is available (Bootstrap 4 requires it)
+                if (typeof jQuery === 'undefined') return;
+                var $ = jQuery;
+                $(function(){
+                    var $carousel = $('#demo');
+                    // carousel interval in milliseconds; change this value to adjust how long each slide stays visible
+                    var carouselInterval = 5000; // default 5000ms (5s)
+                    if ($carousel.length) {
+                        // initialize carousel with the desired interval (overrides data-interval if present)
+                        $carousel.carousel({ interval: carouselInterval });
+                    }
+                    if (!$carousel.length) return;
+                    var $inner = $carousel.find('.carousel-inner');
+
+                    function activeImageHeight($item){
+                        var $img = $item.find('img');
+                        if (!$img.length) return $item.outerHeight();
+                        return $img.outerHeight(true) || $img.height() || $item.outerHeight();
+                    }
+
+                    function setInnerHeightToActive(){
+                        var $active = $inner.find('.carousel-item.active');
+                        if (!$active.length) return;
+                        var h = activeImageHeight($active);
+                        $inner.css('height', h + 'px');
+                    }
+
+                    // On slide start, animate to the next slide's image height
+                    $carousel.on('slide.bs.carousel', function(e){
+                        var $next = $(e.relatedTarget);
+                        var nextH = activeImageHeight($next);
+                        // ensure current explicit height is set so transition animates
+                        $inner.css('height', $inner.height() + 'px');
+                        // trigger reflow then set next height
+                        window.requestAnimationFrame(function(){
+                            $inner.css('height', nextH + 'px');
+                        });
+                    });
+
+                    // After the slide finishes, set height to auto (so responsive resizes work naturally)
+                    $carousel.on('slid.bs.carousel', function(){
+                        // small timeout to allow transition to finish
+                        setTimeout(function(){
+                            $inner.css('height', 'auto');
+                        }, 470); // slightly longer than CSS transition (450ms) to ensure completion
+                    });
+
+                    // On load and resize, set an initial height
+                    $(window).on('load resize', function(){
+                        // if carousel is currently transitioning, skip immediate change
+                        setTimeout(setInnerHeightToActive, 60);
+                    });
+
+                    // initialize
+                    setInnerHeightToActive();
+                });
+            })();
+        </script>
 
     </body>
 

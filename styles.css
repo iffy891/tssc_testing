@@ -22,7 +22,7 @@
 }
 
 body{
-    background-color: #0ee920cb;
+    background-color: #25c632cb;
     padding: 5px;
 }
 h1, p#motto {
@@ -73,10 +73,7 @@ h1.navbar {
     background-color: white;
 }
 
-#image_carousel_right {
-    float: none;
-    height: auto;
-}
+
 
 footer {
     /*border: 3px solid yellow;*/
@@ -84,6 +81,7 @@ footer {
     clear: both;
     background-color: white;
     padding: 10px;
+    min-height: 80px;    /* adjust as needed */
 }
 
 #Assoc_Logo {
@@ -127,10 +125,12 @@ nav.navbar {
     margin: 0;
 }
 
+/*
 .pg_img {
-    width: inherit;
+    width: 100%;
     height: auto;
 }
+*/
 .link:hover{
     background-color: #0ee920cb;
     color: black;
@@ -153,16 +153,17 @@ nav.navbar {
 
 .nav-link {
     display: block;
-    padding: 12px 16px;;
+    padding: 12px 16px;
     border-radius: 10px;  /* was 5px */
-    background: transparent;;
+    background: transparent;
     color: rgba(0,0,0,0.92) !important;
-    font-weight: 600;
+    font-weight: 450;
     box-shadow: none;
     transition: background-color 160ms ease, transform100ms ease, box-shadow 160ms ease;
     outline: 2px solid black;
     outline-offset: 0px;
-    margin-right: 10px;
+    /*margin-right: 10px;*/
+    font-size: 1.12rem;
 }
 .navbar-toggler {
 
@@ -191,6 +192,19 @@ a {
     padding:8px;
     margin-top:8px;
 
+}
+
+#calendar_title {
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+#main_calendar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* ==========================================================
@@ -243,3 +257,76 @@ td, th {
 }
 
 
+/* #image_carousel {
+    width: 50%;
+    margin-top: 10px;
+    height: 400px;
+    margin-bottom: 20px;
+    padding: 5px;
+} */
+
+/* make carousel centered and responsive on small screens */
+#image_carousel{
+    float: none;
+    margin: 10px auto 20px auto; /* top auto bottom */
+    padding: 5px;
+    width: 100%;
+    max-width: 1000px; /* reasonable cap so carousel isn't too wide on very large screens */
+    box-sizing: border-box;
+    height: auto;
+}
+
+/* ensure carousel content is centered inside its container */
+#carousel_content,
+.carousel-inner {
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    /* hide overflow so slides don't show outside the carousel during transitions */
+    overflow: hidden;
+    /* allow smooth height transitions when JS adjusts the height; tuned to 450ms */
+    transition: height 450ms ease;
+}
+
+/* Let images determine their height so they are never cropped; remove fixed heights */
+#image_carousel,
+#carousel_content,
+.carousel-inner,
+.carousel-item {
+    height: auto;
+    max-height: none;
+    overflow: visible;
+}
+
+/* preserve Bootstrap's slide behavior */
+.carousel-item {
+    position: relative;
+    background: transparent;
+    /* prevent ghosting during transforms */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    /* default hidden so only active/adjacent slides display */
+    display: none;
+}
+
+/* Ensure Bootstrap can animate the next/prev slides during sliding */
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev {
+    display: block;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+/* show full images without cropping across all screen sizes */
+.carousel-item .pg_img,
+.pg_img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    display: block;
+    object-fit: contain; /* preserve whole image */
+    object-position: center;
+}

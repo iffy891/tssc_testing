@@ -23,6 +23,13 @@
     margin-top: 10px;
 }
 
+#image_carousel {
+    width: 50%;
+    margin: 0 auto; /* center on desktop */
+    float: none;
+    box-sizing: border-box;
+}
+
 /* #map_right {
     float: right;
     width: 50%;
