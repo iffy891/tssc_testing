@@ -330,3 +330,9 @@ td, th {
     object-fit: contain; /* preserve whole image */
     object-position: center;
 }
+
+#tssc_flow {
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
