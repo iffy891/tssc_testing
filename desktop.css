@@ -9,18 +9,44 @@
 ===========================================================*/
 #nav_setup {
     background-color: white;
-    align-content: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 #main_content_left {
     float: left;
     width: 50%;
 }
-#video_right, #map_right {
+
+#main_content {
+    width: 75%;
+    display: block;
+    margin: 20px auto 0 auto;
+    text-align: center;
+}
+
+#map_right {
     float: right;
     width: 50%;
     display: block;
     margin-top: 10px;
+}
+
+#video_right {
+    width: 75%;
+    display: block;
+    margin: 20px auto 0 auto;
 }
 
 #image_carousel {

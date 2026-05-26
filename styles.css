@@ -61,14 +61,14 @@ h1.navbar {
     box-sizing: border-box;
 }
 
-#main_content_left, #image_carousel_right {
+#main_content, #image_carousel_right, #main_content_left {
     /*width: 50%;*/
     margin-bottom: 20px;
     padding: 5px;
     margin-top: 10px;
 }
 
-#main_content_left {
+#main_content, #main_content_left {
     float: none;
     background-color: white;
 }
